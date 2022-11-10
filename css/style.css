@@ -144,7 +144,6 @@
 }
 .address {
   font-family: 'Roboto';
-  font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
@@ -153,10 +152,12 @@
 .address .map {
   color: #ffffff;
   text-decoration: none;
+  font-style: normal;
 }
 .address .link {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  font-style: normal;
 }
 
 .button {
