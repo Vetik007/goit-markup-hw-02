@@ -1,17 +1,36 @@
 :root {
   /* первичный цвет текста */
   --primary-text-color: #757575;
-  /* вторичный цвет текста */
-  --secondary-text-color: #212121;
+  /* первичный цвет заголовка */
+  --primary-title-color: #212121;
   --accent-text-color: #2196f3;
   /* первичный цвет фона */
   --primary-background-color: #f5f5f5;
   /* вторичный цвет фона */
   --secondary-background-color: #f5f4fa;
+  --white-color: #ffffff;
 }
 /* Стили для index.html  */
-.body {
-  background-color: #f5f5f5;
+body {
+  background-color: var(--white-color);
+  font-family: 'Roboto';
+  font-size: 14px;
+  color: #212121;
+  letter-spacing: 0.03em;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 /* html + portfolio */
@@ -20,11 +39,8 @@
   text-decoration: none;
 
   font-family: 'Raleway';
-  font-style: normal;
-  font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
-  letter-spacing: 0.03em;
 }
 /* html + portfolio */
 .net {
@@ -36,10 +52,8 @@
 }
 /* html + portfolio */
 .nav-site .link {
-  color: var(--secondary-text-color);
-  font-family: 'Roboto';
+  color: var(--primary-title-color);
   font-weight: 500;
-  font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
   text-decoration: none;
@@ -57,9 +71,9 @@
   list-style: none;
 }
 .contact .link {
-  font-family: 'Roboto';
+  /* font-family: 'Roboto'; */
   font-weight: 500;
-  font-size: 14px;
+  /* font-size: 14px; */
   line-height: 1.1;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
@@ -75,52 +89,59 @@
   background-color: #2f303a;
 }
 .hero-title {
-  font-family: 'Roboto';
+  /* font-family: 'Roboto'; */
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #ffffff;
+  color: var(--white-color);
 }
 
+.about > ul {
+  list-style: none;
+}
+.about-title {
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+.about-text {
+  line-height: 1.71;
+  color: var(--primary-text-color);
+}
 .section > ul {
   list-style: none;
 }
-.section {
-  font-family: 'Roboto';
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
 
-  color: var(--primary-text-color);
-}
-.section .section-titel {
-  font-family: 'Roboto';
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--secondary-text-color);
+.section-title {
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  color: var(--primary-title-color);
 }
 
-.team-section > ul {
-  list-style: none;
-}
-.team-section {
+.team {
   background-color: var(--secondary-background-color);
-  color: var(--primary-text-color);
 }
 .team-titel {
-  color: var(--secondary-text-color);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
   text-align: center;
+  color: var(--primary-title-color);
+}
+
+.team-text {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--primary-text-color);
 }
 
 .team-card {
-  background-color: #ffffff;
+  background-color: var(--white-color);
 }
 
 /* html + portfolio */
@@ -129,7 +150,7 @@
 }
 
 .logo-footer {
-  color: #ffffff;
+  color: var(--white-color);
   text-decoration: none;
 
   font-family: 'Raleway';
@@ -143,25 +164,21 @@
   list-style: none;
 }
 .address {
-  font-family: 'Roboto';
+  font-style: normal;
   font-weight: 400;
-  font-size: 14px;
   line-height: 1.71;
-  letter-spacing: 0.03em;
 }
 .address .map {
-  color: #ffffff;
+  color: var(--white-color);
   text-decoration: none;
-  font-style: normal;
 }
 .address .link {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
-  font-style: normal;
 }
 
 .button {
-  color: #ffffff;
+  color: var(--white-color);
   background-color: var(--accent-text-color);
 }
 
@@ -171,8 +188,8 @@
   list-style: none;
 }
 .radio-button {
-  color: var(--secondary-text-color);
-  background-color: var(--secondary-background-color);
+  /* color: var(--primary-title-color); */
+  /* background-color: var(--secondary-background-color); */
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 16px;
@@ -182,7 +199,13 @@
 
 .radio-button:hover,
 .radio-button:focus {
-  color: var(--accent-text-color);
+  color: var(--white-color);
+  background-color: var(--accent-text-color);
+}
+.cursor {
+  cursor: pointer;
+  background-color: var(--secondary-background-color);
+  color: var(--primary-title-color);
 }
 
 .work {
@@ -190,10 +213,7 @@
 }
 
 .work-title {
-  color: var(--secondary-text-color);
-
-  font-family: 'Roboto';
-  font-weight: 700;
+  color: var(--primary-title-color);
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -201,9 +221,6 @@
 
 .work-link {
   color: var(--primary-text-color);
-  font-family: 'Roboto';
-  font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
-  letter-spacing: 0.03em;
 }
